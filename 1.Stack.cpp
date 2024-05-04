@@ -35,7 +35,7 @@ int main()
         bool ok = 1;
         for (auto u : s)
         {
-            if(u =='(' || u =='{' || u =='[' )
+            if(u =='(' || u =='{' || u =='[' )  
                 st.push(u);
             else{
                 if(st.empty()){

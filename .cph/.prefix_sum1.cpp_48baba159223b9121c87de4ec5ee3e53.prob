@@ -1,0 +1,1 @@
+{"name":"Local: prefix_sum1","url":"/Users/fahim/Documents/Data_structure/prefix_sum1.cpp","tests":[{"id":1710943107431,"input":"5 \n1 2 3 4 5","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/fahim/Documents/Data_structure/prefix_sum1.cpp","group":"local","local":true}
