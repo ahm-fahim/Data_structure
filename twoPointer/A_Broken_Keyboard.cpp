@@ -13,20 +13,6 @@ using namespace std;
 #define make_fast() ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
 #define ll long long int
 
-// find the pair whose sum is equal to x
-bool twoPointer(int arr[],int x, int n){
-    int i = 0;
-    int j = n - 1;
-
-    while(i<=j){
-        int sum = arr[i] + arr[j];
-        if(sum == x)
-            return true;
-        (sum > x) ? j-- : i--;
-    }
-    return false;
-}
-
 int main()
 {
     make_fast();
@@ -34,15 +20,21 @@ int main()
     cin >> t;
 
     while(t--){
-        int n, x;
-        cin >> n >> x;
-        int arr[n+1];
-        for (int i = 0; i < n; i++)
-            cin >> arr[i];
+        string s;
+        cin >> s;
 
-        sort(arr, arr + n);
+        set<char> st;
+        for (int i = 0; i < s.size();i++){
+            if(s[i]==s[i+1])
+                i++;
+            else
+                st.insert(s[i]);
+        }
 
-        cout << ((twoPointer(arr, x, n)) ? "YES" : "NO") << '\n';
+        for(auto i:st){
+            cout << i;
+        }
+        cout << '\n';
     }
 
     return 0;
